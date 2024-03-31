@@ -1,25 +1,14 @@
-import os
+import settings
+import functions
 
-WORKING_DIRECTORY = "C:/Users/persi/git/poject2/.git/"
+functions.create_folder('my_folder')
 
-def list_files_and_folders():
-    file_list = []
-    folder_list = []
+functions.create_file('my_file.txt', 'Hello, world!')
 
-    os.chdir(WORKING_DIRECTORY)
+files = functions.list_files()
+print(files)
 
-    for item in os.listdir():
-        if os.path.isfile(item):
-            file_list.append(item)
-        elif os.path.isdir(item):
-            folder_list.append(item)
+functions.delete_file('my_file.txt')
 
-    print("Files:")
-    for file in file_list:
-        print(file)
+functions.delete_folder('my_folder')
 
-    print("\nFolders:")
-    for folder in folder_list:
-        print(folder)
-
-list_files_and_folders()
