@@ -1,8 +1,9 @@
 import os
 
 def create_folder(folder_name):
-    folder_path = os.path.join(settings.WORKING_DIRECTORY, folder_name)
-    os.makedirs(folder_path, exist_ok=True)
+    current_directory = os.getcwd()
+    folder_path = os.path.join(current_directory, folder_name)
+    os.mkdir(folder_path)
 
 def create_file(file_name, content):
     file_path = os.path.join(settings.WORKING_DIRECTORY, file_name)

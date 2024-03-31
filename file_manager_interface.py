@@ -3,7 +3,7 @@ import os
 
 
 def main():
-    current_directory = os.path.abspath(settings.WORKING_DIRECTORY)  
+    current_directory = os.getcwd()
     print(f'Welcome to File Manager. Current directory: {current_directory}')
 
     while True:
