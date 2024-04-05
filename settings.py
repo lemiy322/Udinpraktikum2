@@ -1,2 +1,2 @@
-WORKING_DIRECTORY = '/path/to/your/working/directory/'
+WORKING_DIRECTORY = '/C:/Users/persi/git/poject2/'
 
